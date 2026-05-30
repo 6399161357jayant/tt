@@ -22,13 +22,13 @@ logger = logging.getLogger(__name__)
 # ── Try to load OpenAI (optional) ──────────────────────────────────────────────
 try:
     from openai import AsyncOpenAI
-    _openai_key = os.environ.get("OPENAI_API_KEY", "")
+    _openai_key = os.environ.get("sk-abcdefabcdefabcdefabcdefabcdefabcdef12", "")
     openai_client = AsyncOpenAI(api_key=_openai_key) if _openai_key else None
 except ImportError:
     openai_client = None
 
 # ── Constants ──────────────────────────────────────────────────────────────────
-OWNER_USERNAMES = ["light_speedy", "light_speedi"]
+OWNER_USERNAMES = ["light_speedy", "light_speedi", "destroyer_speedy"]
 BOT_USERNAME = "nami_ibot"
 GROUP_LINK = "https://t.me/+em6PdzD7hB83Zjc1"
 NAMI_PHOTO_URL = "https://files.catbox.moe/vremhb.png"
@@ -1115,7 +1115,7 @@ async def post_init(app: Application):
 
 
 def main():
-    token = os.environ.get("TELEGRAM_BOT_TOKEN")
+    token = os.environ.get("8114705738:AAFekh_Yt27Jb-wSmNY0slRmQS_sAel-8cg")
     if not token:
         raise RuntimeError("TELEGRAM_BOT_TOKEN env var not set!")
     app = Application.builder().token(token).post_init(post_init).build()

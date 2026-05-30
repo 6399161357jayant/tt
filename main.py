@@ -312,7 +312,7 @@ async def cmd_bal(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
         f"💰 *Balance:* ${target['balance']:,}\n"
         f"🏆 *Global Rank:* #{rank}\n"
         f"❤️ *Job:* {job}\n"
-        f"⛵️ *Ship:* {f\"{ship['name']} [{ship['code']}]\" if ship else 'None'}\n"
+       f"⛵️ *Ship:* {ship['name']} [{ship['code']}] \n" if ship else "⛵️ *Ship:* None\n"
         f"⚔️ *Kills:* {target['kills']}\n"
         f"💸 *Bounty:* ${target['bounty_amount']:,}\n"
         f"🎁 *Items:* {best_item or 'None'}"
